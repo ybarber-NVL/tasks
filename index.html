@@ -859,11 +859,22 @@ function seedIfEmpty() {
       cat: "work",
       due: "tomorrow EOD",
       done: false,
-      created: Date.now(),
+      created: Date.now() - 1000,
       subtasks: [
         { id: nextSubId++, title: "Generate a Redmine query to list all GB-related Rel2A (target version) FRs", done: false },
         { id: nextSubId++, title: "Send all relevant Release Managers the list and ask for confirmation", done: false }
       ]
+    });
+    tasks.push({
+      id: nextId++,
+      title: "Release 1.3.9_debug",
+      note: "",
+      priority: "high",
+      cat: "work",
+      due: "today",
+      done: false,
+      created: Date.now(),
+      subtasks: []
     });
     save();
   }
